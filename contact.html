@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmad_Darabseh_CyberSecurity_studant(165910)</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Contact form page." />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Ahmad_Cybersecurity</div>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Me</h1>
+    <div class="form-card">
+      <form id="contactForm" novalidate>
+        <label for="fullName">Full Name <span class="req">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your Name" />
+
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" />
+
+        <label for="country">Country <span class="req">*</span></label>
+        <select id="country" name="country">
+          <option value="">-- Select --</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Egypt">Egypt</option>
+          <option value="UAE">United Arab Emirates</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="comments">Comments <span class="req">*</span></label>
+        <textarea id="comments" name="comments" placeholder="Write your message..."></textarea>
+
+        <button type="submit">Submit</button>
+        <div class="note">All fields are required. This is a simple front‑end demo.</div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    // this script check from inputs before send....(Darabseh)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const comments = document.getElementById('comments').value.trim();
+
+      // And this small script check for email format...(Darabseh)
+      const emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if(!name || !email || !country || !comments){
+        alert('Please fill in all fields before submitting.');
+        return;
+      }
+      if(!emailOK){
+        alert('Please enter a valid email address.');
+        return;
+      }
+      alert('Form submitted successfully!');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

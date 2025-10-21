@@ -1,0 +1,115 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f9ff;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0a2e6c;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 18px;
+  color: #0a2e6c;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+
+h1, h2 {
+  color: #0a2e6c;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  background-color: #e9f0ff;
+  border: 1px solid #c6d4f5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f4ff;
+}
+
+footer {
+  background-color: #f9f9f9;
+  border: top 1px solid #ddd ;  
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+  font-size: 14px;
+  padding: 10px 0;
+}
